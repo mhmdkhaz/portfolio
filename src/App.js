@@ -1,8 +1,5 @@
-import React from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // pages
 import Sidebar from "./pages/Navbar/SideBar";
@@ -11,6 +8,9 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
+
+// loader
+import Loader from "./component/Loader";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +38,16 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <div>
       <RouterProvider router={router} />

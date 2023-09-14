@@ -8,7 +8,7 @@ import {
 
 function Home() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen pb-10">
       <h1 className="uppercase text-4xl text-[#00A3E1]">HELLO, WORLD!</h1>
       <h1 className="capitalize text-center text-white text-5xl mt-5">
         I<span style={{ color: "#00A3E1" }}>'</span>m mohammed khazaa
