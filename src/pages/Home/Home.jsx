@@ -5,10 +5,11 @@ import {
   faGithubAlt,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+import { styled } from "styled-components";
 
 function Home() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen pb-10">
+    <div className="flex flex-col justify-center items-center h-full pb-10 h-screen">
       <h1 className="uppercase text-4xl text-[#00A3E1]">HELLO, WORLD!</h1>
       <h1 className="capitalize text-center text-white text-5xl mt-5">
         I<span style={{ color: "#00A3E1" }}>'</span>m mohammed khazaa
@@ -25,27 +26,38 @@ function Home() {
         field of Front End Development
       </p>
       <div className="icon flex gap-5 mt-5 text-white">
-        <a
+        <Link
           className="border rounded-full px-2 py-1 "
           href="https://www.linkedin.com/in/mohammed-khazaa-32b12819a/"
         >
           <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a
+        </Link>
+        <Link
           className="border rounded-full px-2 py-1 "
           href="https://github.com/mhmdkhaz"
         >
           <FontAwesomeIcon icon={faGithubAlt} />
-        </a>
-        <a
+        </Link>
+        <Link
           className="border rounded-full px-2 py-1 "
           href="https://api.whatsapp.com/send?phone=01002409654"
         >
           <FontAwesomeIcon icon={faWhatsapp} />
-        </a>
+        </Link>
       </div>
     </div>
   );
 }
 
 export default Home;
+
+
+const Link = styled.a`
+  transition: all 0.3s linear;
+  cursor: pointer;
+  &:hover {
+    background-color: #00a3e1;
+    color: white;
+    box-shadow: 0 3px 10px rgb(255, 255, 255, 0.7);
+  }
+`;

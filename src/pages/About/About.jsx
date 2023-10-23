@@ -119,9 +119,9 @@ function About() {
                 </ul>
               </div>
             </div>
-            <Year class="year">
-              <To class="to">2022</To>
-              <From class="from">2018</From>
+            <Year className="year">
+              <To className="to">2022</To>
+              <From className="from">2018</From>
             </Year>
           </div>
         </div>
@@ -164,9 +164,9 @@ function About() {
           skills
         </h1>
         <ul className="capitalize tracking-wider flex flex-wrap justify-center gap-4 mt-3">
-          {skills.map((skill) => {
+          {skills.map((skill, index) => {
             return (
-              <ListSkills className="flex flex-col justify-center items-center">
+              <ListSkills key={index} className="flex flex-col justify-center items-center">
                 {skill.icon}
                 {skill.name}
               </ListSkills>
