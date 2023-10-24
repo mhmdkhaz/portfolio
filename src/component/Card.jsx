@@ -3,12 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Card({ img, name, github, liveDemo }) {
   return (
     <div>
       <figure>
-        <img src={img} className="scale-110" alt="" />
+        <LazyLoadImage src={img} className="scale-110" effect="blur" />
       </figure>
       <div>
         <h2 className="capitalize text-white text-center">{name}</h2>
