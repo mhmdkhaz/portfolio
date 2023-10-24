@@ -163,10 +163,13 @@ function About() {
         <h1 className="text-center uppercase tracking-widest text-3xl">
           skills
         </h1>
-        <ul className="capitalize tracking-wider flex flex-wrap justify-center gap-4 mt-3">
+        <ul className="capitalize tracking-wider flex flex-wrap justify-center gap-4 mt-3 py-4">
           {skills.map((skill, index) => {
             return (
-              <ListSkills key={index} className="flex flex-col justify-center items-center">
+              <ListSkills
+                key={index}
+                className="flex flex-col justify-center items-center"
+              >
                 {skill.icon}
                 {skill.name}
               </ListSkills>

@@ -8,6 +8,7 @@ import {
 import { styled } from "styled-components";
 
 function Home() {
+  console.log("dd");
   return (
     <div className="flex flex-col justify-center items-center h-full pb-10 h-screen">
       <h1 className="uppercase text-4xl text-[#00A3E1]">HELLO, WORLD!</h1>

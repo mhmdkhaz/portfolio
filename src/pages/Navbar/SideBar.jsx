@@ -57,25 +57,10 @@ function SideBar() {
     };
   });
 
-  //
-  useEffect(() => {
-    const overlay = document.querySelector(".overlay");
-    if (show) {
-      setTimeout(() => {
-
-        overlay.classList.add("block");
-      }, 500);
-    } else {
-      overlay.classList.add("hidden");
-    }
-  }, [show]);
-
   return (
     <Fragment>
       {/* overlay sidebar */}
-      <Overlay
-        className={`overlay ${show ? "opacity-100" : "opacity-0"}`}
-      ></Overlay>
+      <Overlay className={`overlay ${show ? "show md:hidden" : ""}`}></Overlay>
       {/* sidedbar */}
       <Header
         ref={headerRef}
@@ -154,16 +139,23 @@ const OpenSide = styled.div`
 `;
 
 const Overlay = styled.div`
+  transition: opacity 0.3s linear;
   position: fixed;
-  transition: all 0.3s linear;
+  z-index: 20;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100vw;
-  /* background: black; */
-  overflow: hidden;
-  /* background: #17181b; */
   background: linear-gradient(
     to left,
-    rgba(23, 24, 27, 0.3),
-    rgba(0, 0, 0, 0.9)
+    rgba(23, 24, 27, 1),
+    rgba(0, 163, 225, 0.2)
   );
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
 `;
