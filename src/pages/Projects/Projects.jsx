@@ -8,7 +8,7 @@ function Projects() {
       img: "images/project/landing.png",
       name: "Landing game",
       github: "https://github.com/mhmdkhaz/LandingPageGame",
-      liveDemo: "https://landing-page-game.vercel.app/",
+      liveDemo: "https://mhmdkhaz.github.io/LandingPageGame/",
     },
     {
       img: "images/project/movix.png",
