@@ -8,19 +8,19 @@ function Projects() {
       img: "images/project/landing.png",
       name: "Landing game",
       github: "https://github.com/mhmdkhaz/LandingPageGame",
-      liveDemo: "landing-page-game.vercel.app",
+      liveDemo: "https://landing-page-game.vercel.app/",
     },
     {
       img: "images/project/movix.png",
       name: "movix",
       github: "https://github.com/mhmdkhaz/Movix",
-      liveDemo: "movix-mhmdkhaz.vercel.app",
+      liveDemo: "https://movix-mhmdkhaz.vercel.app/",
     },
     {
       img: "images/project/gampapp.png",
       name: "game app",
       github: "https://github.com/mhmdkhaz/gameWeb",
-      liveDemo: "game-web-eta.vercel.app",
+      liveDemo: "https://game-web-eta.vercel.app/",
     },
     {
       img: "images/project/dashpord.png",
@@ -32,7 +32,7 @@ function Projects() {
       img: "images/project/travel.png",
       name: "travel",
       github: "https://github.com/mhmdkhaz/travel",
-      liveDemo: "travel-mhmdkhaz.vercel.app",
+      liveDemo: "https://travel-mhmdkhaz.vercel.app/",
     },
     {
       img: "images/project/ecomerce.png",

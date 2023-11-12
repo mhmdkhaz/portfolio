@@ -37,7 +37,7 @@ function Card({ img, name, github, liveDemo }) {
 
 export default Card;
 
-const Live = styled.h2`
+const Live = styled.a`
   transition: all 0.3s linear;
   &:hover {
     background-color: #00a3e1;
